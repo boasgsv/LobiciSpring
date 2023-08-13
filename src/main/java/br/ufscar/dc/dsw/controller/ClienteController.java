@@ -19,6 +19,7 @@ import br.ufscar.dc.dsw.domain.Locadora;
 import br.ufscar.dc.dsw.domain.Cliente;
 import br.ufscar.dc.dsw.service.spec.ILocadoraService;
 import br.ufscar.dc.dsw.service.spec.IClienteService;
+import br.ufscar.dc.dsw.service.spec.ILocacaoService;
 
 @Controller
 @RequestMapping("/clientes")
@@ -26,6 +27,9 @@ public class ClienteController {
 
 	@Autowired
 	private IClienteService clienteService;
+
+	@Autowired
+	private ILocacaoService locacaoService;
 
 	@Autowired
 	private ILocadoraService locadoraService;
@@ -38,6 +42,13 @@ public class ClienteController {
 	@GetMapping("/listar")
 	public String listar(ModelMap model) {
 		model.addAttribute("clientes", clienteService.buscarTodos());
+		return "cliente/lista";
+	}
+
+	
+	@GetMapping("/locacoes")
+	public String listarLocacoes(Cliente cliente, ModelMap model) {
+		model.addAttribute("clientes", locacaoService.buscarTodosPorCliente(cliente));
 		return "cliente/lista";
 	}
 
