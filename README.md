@@ -45,7 +45,7 @@ R4: <br />
 
 
 R5: <br />
-    ( ) Implementado (X) Parcialmente implementado ( ) Não implementado <br />
+    (X) Implementado ( ) Parcialmente implementado ( ) Não implementado <br />
     Divisão na implementação da funcionalidade: Gabrielle (50%) Marcos (50%) <br />
 
 R6: <br />
