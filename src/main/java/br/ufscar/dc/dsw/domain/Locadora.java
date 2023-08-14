@@ -16,13 +16,18 @@ import br.ufscar.dc.dsw.validation.UniqueCNPJ;
 @Table(name = "Locadora")
 public class Locadora extends Usuario {
 
-	@UniqueCNPJ (message = "{Unique.locadora.CNPJ}")
+	public Locadora() {
+        this.setRole("ROLE_LOCADORA");
+        this.setEnabled(true);
+    }
+	
+	//@UniqueCNPJ (message = "{Unique.locadora.CNPJ}")
 	@NotBlank
 	@Size(min = 18, max = 18, message = "{Size.locadora.CNPJ}")
 	@Column(nullable = false, unique = true, length = 60)
 	private String CNPJ;
 
-	@NotBlank
+	@NotBlank(message="{Blank.locadora.cidade}")
     @Column(nullable = false, length = 64)
     private String cidade;
 

@@ -63,9 +63,12 @@ public class UsuarioController {
 		if (result.hasErrors()) {
 			return "usuario/cadastro";
 		}
+		System.out.println("Senha vai ser alterado");
 
 		if (novoPassword != null && !novoPassword.trim().isEmpty()) {
+			System.out.println("Senha foi editada");
 			usuario.setPassword(encoder.encode(novoPassword));
+
 		} else {
 			System.out.println("Senha não foi editada");
 		}

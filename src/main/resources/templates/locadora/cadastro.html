@@ -32,7 +32,7 @@
 						<label th:text="#{locadora.nome.label}" for="nome"></label> 
 						<input type="text" class="form-control" id="name" autofocus="autofocus"
 							th:field="*{name}" th:placeholder="#{locadora.nome.label}"
-							th:classappend="${#fields.hasErrors('name')} ? is-invalid" />
+							th:classappend="${#fields.hasErrors('name')} ? is-invalid" required/>
 
 						<div class="invalid-feedback">
 							<span th:errors="*{name}"></span>
@@ -43,7 +43,7 @@
 						<label th:text="#{locadora.cidade.label}" for="cidade"></label> 
 						<input type="text" class="form-control" id="cidade" autofocus="autofocus"
 							th:field="*{cidade}" th:placeholder="#{locadora.cidade.label}"
-							th:classappend="${#fields.hasErrors('cidade')} ? is-invalid" />
+							th:classappend="${#fields.hasErrors('cidade')} ? is-invalid" required/>
 
 						<div class="invalid-feedback">
 							<span th:errors="*{cidade}"></span>
@@ -56,7 +56,7 @@
 							th:field="*{CNPJ}" placeholder="__.___.___/____-__"
 							th:readonly="${locadora.id != null}"
 							data-mask="00.000.000/0000-00" data-mask-reverse="true"
-							th:classappend="${#fields.hasErrors('CNPJ')} ? is-invalid" />
+							th:classappend="${#fields.hasErrors('CNPJ')} ? is-invalid" required/>
 							
 						<div class="invalid-feedback">
 							<span th:errors="*{CNPJ}"></span>
@@ -67,7 +67,7 @@
 						<label th:text="#{locadora.email.label}" for="email"></label> 
 						<input type="email" class="form-control" id="email" placeholder="Email"
 							autofocus="autofocus" th:field="*{email}"
-							th:classappend="${#fields.hasErrors('email')} ? is-invalid" />
+							th:classappend="${#fields.hasErrors('email')} ? is-invalid" required/>
 						
 						<div class="invalid-feedback">
 							<span th:errors="*{email}"></span>
@@ -84,6 +84,15 @@
 						<div class="invalid-feedback">
 							<span th:errors="*{password}"></span>
 						</div>
+					</div>
+
+					<div th:unless="${locadora.id == null}" class="form-group col-md-6">
+						<label th:text="#{locadora.password.label}" for="password"></label> 
+						<input type="password" class="form-control" name="novoPassword"
+							th:placeholder="#{locadora.password.label}" autofocus="autofocus"
+							th:classappend="${#fields.hasErrors('password')} ? is-invalid" />
+							
+						<input type="hidden" th:field="*{password}" />
 					</div>
 				</div>
 
