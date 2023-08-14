@@ -29,7 +29,7 @@ clonar o repositório
 
 R1: <br />
     (X) Implementado ( ) Parcialmente implementado ( ) Não implementado <br />
-    Divisão na implementação da funcionalidade: Leandro (Controller, DAO e Views), Marcos (Login e CRUD interno de usuário), Marcos (Autorização e Integração) <br />
+    Divisão na implementação da funcionalidade: Leandro (Controller, DAO e Views), Marcos (Login e CRUD interno de usuário, Integração), Leandro (Autorizaçao) <br />
 
 R2: <br />
     (X) Implementado ( ) Parcialmente implementado ( ) Não implementado <br />
