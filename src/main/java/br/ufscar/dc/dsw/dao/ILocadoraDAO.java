@@ -21,6 +21,7 @@ public interface ILocadoraDAO extends CrudRepository<Locadora, Long>{
 
 	void deleteById(Long id);
 
-    // @Query("SELECT * FROM locadoras l WHERE l.empresa.cidade = :cidade AND FUNCTION('STR_TO_DATE', v.dataLimite, '%d/%m/%Y') >= CURRENT_DATE")
-    // public List<Locadora> getVagasByCidade(@Param("cidade") String cidade);
+	@Query("SELECT l FROM Locadora l WHERE l.cidade = :cidade")
+	public List<Locadora> getLocadorasByCidade(@Param("cidade") String cidade);
+	
 }

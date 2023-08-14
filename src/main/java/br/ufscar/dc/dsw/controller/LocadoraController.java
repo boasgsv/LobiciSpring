@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import java.util.List;
 
 import br.ufscar.dc.dsw.dao.ILocadoraDAO;
 import br.ufscar.dc.dsw.dao.IUsuarioDAO;
@@ -117,5 +119,20 @@ public class LocadoraController {
 			model.addAttribute("sucess", "locadora.delete.sucess");
 		}
 		return listar(model);
+	}
+
+	@PostMapping("/filtrar")
+	public String filtrar(@RequestParam(name="cidade") String cidade, ModelMap model, RedirectAttributes attr) {
+		List<Locadora> locadora = locadoraDAO.getLocadorasByCidade(cidade);
+		System.out.println("Cidade " + cidade);
+        if(locadora.isEmpty()){
+            attr.addFlashAttribute("fail", "locadora.filtrar.error");
+            return "redirect:/locadoras/listar";
+        }
+        else{
+			System.out.println("Cidade " + cidade);
+            model.addAttribute("locadoras", locadora);
+        }
+		return "locadora/lista";
 	}
 }
