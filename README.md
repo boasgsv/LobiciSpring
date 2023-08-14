@@ -46,11 +46,11 @@ R4: <br />
 
 R5: <br />
     ( ) Implementado (X) Parcialmente implementado ( ) Não implementado <br />
-    Divisão na implementação da funcionalidade: Gabriele (Controller, DAO e VIEWS ) Marcos (login, Integração, Email) <br />
+    Divisão na implementação da funcionalidade: Gabrielle (Controller, DAO e VIEWS ) Marcos (login, Integração, Email) <br />
 
 R6: <br />
     (X) Implementado ( ) Parcialmente implementado ( ) Não implementado <br />
-    Divisão na implementação da funcionalidade: Marcos (Controller, Views, Integração com Login), Gabrielle(DAO) <br />
+    Divisão na implementação da funcionalidade: Marcos (Controller, Views, Integração com Login), Leandro(DAO) <br />
 
 R7: <br />
     (X) Implementado ( ) Parcialmente implementado ( ) Não implementado <br />
@@ -62,8 +62,8 @@ R8: <br />
 
 R9: <br />
     (X) Implementado ( ) Parcialmente implementado ( ) Não implementado <br />
-    Divisão na implementação da funcionalidade: Gabriele (33%), Matheus (33%), Marcos (33%) <br />
+    Divisão na implementação da funcionalidade: Gabrielle (25%), Matheus (25%), Marcos (25%), Leandro(25%) <br />
 
 R10: <br />
     (X) Implementado ( ) Parcialmente implementado ( ) Não implementado <br />
-    Divisão na implementação da funcionalidade: Gabriele (33%), Matheus (33%), Marcos (33%) <br />
+    Divisão na implementação da funcionalidade: Gabrielle (25%), Matheus (25%), Marcos (25%), Leandro(25%) <br />
